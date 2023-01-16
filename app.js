@@ -15,7 +15,9 @@ app.use( express.static(publicPath) );
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "./Views/index.html"));
 });
-
+app.get("/Views/index.html", (req, res) => {
+    res.sendFile(path.join(__dirname, "./Views/index.html"));
+});
 app.get("/registro", (req, res) => {
     res.sendFile(path.join(__dirname, "./Views/register.html"));
 });
